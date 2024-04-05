@@ -1,1 +1,91 @@
-// Your styles go here
+@import"@fortawesome/fontawesome-free";
+
+// Define an array of links
+$navLinks: (
+  ("Home", "#"),
+  ("Examples", "#"),
+  ("Features", "#"),
+  ("Team", "#"),
+  ("Help", "#")
+);
+
+// Generate the HTML markup using @for directive
+.navbar-nav {
+  @for $i from 1 through length($navLinks) {
+    $text: nth(nth($navLinks, $i), 1);
+    $url: nth(nth($navLinks, $i), 2);
+    
+    .nav-item:nth-child(#{$i}) {
+      .nav-link {
+        @if $text == "Home" {
+          &.active {
+            font-weight: bold;
+            color: aqua; // Example styling for active link
+          }
+        }
+        color: black; // Default link color
+      }
+    }
+  }
+}
+
+//Card styles
+$icon-colors: aqua, lightblue, lightskyblue;
+
+// Define a list of icons
+$icons: fa-paw, fa-jedi, fa-apple;
+
+// Generate the CSS using @each directive
+@each $color in $icon-colors {
+  $index: index($icon-colors, $color);
+  $icon: nth($icons, $index);
+  
+  .col-sm-4:nth-child(#{$index}) {
+    .card {
+      .card-body {
+        .#{$icon} {
+          color: $color;
+        }
+      }
+    }
+  }
+}
+
+//Row and container styles
+.container {
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin: 20px;
+    box-shadow: 0 2px 4px grey; /* Add box shadow */
+  }
+
+  footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  .footer-columns {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-column {
+    flex: 1;
+  }
+
+  .footer-column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 5px;
+  }
+
+  //link box styles
+  

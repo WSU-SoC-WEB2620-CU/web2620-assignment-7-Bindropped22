@@ -1,4 +1,4 @@
-@import"@fortawesome/fontawesome-free";
+@import "@fortawesome/fontawesome-free";
 
 // Define an array of links
 $navLinks: (
@@ -44,7 +44,7 @@ $icons: fa-paw, fa-jedi, fa-apple;
     .card {
       .card-body {
         .#{$icon} {
-          color: $color;
+          color: $color; 
         }
       }
     }
@@ -53,39 +53,36 @@ $icons: fa-paw, fa-jedi, fa-apple;
 
 //Row and container styles
 .container {
-    margin-bottom: 20px;
-  }
-  
-  .row {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-    margin: 20px;
-    box-shadow: 0 2px 4px grey; /* Add box shadow */
-  }
+  margin-bottom: 20px;
+}
 
-  footer {
-    background-color: #f2f2f2;
-    padding: 20px;
-  }
+.row {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  margin: 20px;
+  box-shadow: 0 2px 4px grey; /* Add box shadow */
+}
 
-  .footer-columns {
-    display: flex;
-    justify-content: space-between;
-  }
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
 
-  .footer-column {
-    flex: 1;
-  }
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .footer-column ul {
-    list-style-type: none;
-    padding: 0;
-  }
+.footer-column {
+  flex: 1;
+}
 
-  .footer-column ul li {
-    margin-bottom: 5px;
-  }
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-  //link box styles
-  
+.footer-column ul li {
+  margin-bottom: 5px;
+}

@@ -20,7 +20,7 @@ $navLinks: (
         @if $text == "Home" {
           &.active {
             font-weight: bold;
-            color: aqua; // Example styling for active link
+            color: aqua; 
           }
         }
         color: black; // Default link color
